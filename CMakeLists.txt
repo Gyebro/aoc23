@@ -12,17 +12,27 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_executable(day01 utils.cpp day01.cpp main.cpp)
+add_executable(day01 sources/utils.cpp sources/day01.cpp sources/main.cpp)
+
+add_executable(day02 sources/utils.cpp sources/day02.cpp)
 
 add_custom_command(TARGET day01 POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${PROJECT_SOURCE_DIR}/inputs"
         $<TARGET_FILE_DIR:day01>)
 
+add_custom_command(TARGET day02 POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${PROJECT_SOURCE_DIR}/inputs"
+        $<TARGET_FILE_DIR:day02>)
+
 enable_testing()
 
-add_executable(day01_test utils.cpp day01.cpp day01_test.cpp)
+add_executable(day01_test sources/utils.cpp sources/day01.cpp sources/day01_test.cpp)
 target_link_libraries(day01_test GTest::gtest_main)
+
+add_executable(day02_test sources/utils.cpp sources/day02.cpp sources/day02_test.cpp)
+target_link_libraries(day02_test GTest::gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(day01_test)
