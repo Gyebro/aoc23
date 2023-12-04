@@ -29,3 +29,13 @@ string trim_spaces(string value) {
 bool contains_char(const string& s, const char c) {
     return (s.find(c) != std::string::npos);
 }
+
+string sanitize_spaces(string str) {
+    str = trim_spaces(str);
+    std::string::iterator new_end =
+            std::unique(str.begin(), str.end(),
+                        [](char lhs, char rhs){ return (lhs == rhs) && (lhs == ' '); }
+            );
+    str.erase(new_end, str.end());
+    return str;
+}

@@ -34,4 +34,6 @@ bool contains(const vector<T>& c, const T& t) {
 
 bool contains_char(const string& s, const char c);
 
+string sanitize_spaces(string str);
+
 #endif //AOC23_UTILS_H
