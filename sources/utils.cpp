@@ -20,8 +20,12 @@ vector<string> split(const string &s, char delim) {
 
 string trim_spaces(string value) {
     // Remove leading spaces
-    value.erase(value.begin(), std::find_if(value.begin(), value.end(), std::bind1st(std::not_equal_to<char>(), ' ')));
+    value.erase(value.begin(), std::find_if(value.begin(), value.end(), std::bind(std::not_equal_to<char>(), ' ', std::placeholders::_1)));
     // Remove trailing ones
-    value.erase(std::find_if(value.rbegin(), value.rend(), std::bind1st(std::not_equal_to<char>(), ' ')).base(), value.end());
+    value.erase(std::find_if(value.rbegin(), value.rend(), std::bind(std::not_equal_to<char>(), ' ', std::placeholders::_1)).base(), value.end());
     return value;
+}
+
+bool contains_char(const string& s, const char c) {
+    return (s.find(c) != std::string::npos);
 }
