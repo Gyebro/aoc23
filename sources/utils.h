@@ -36,4 +36,16 @@ bool contains_char(const string& s, const char c);
 
 string sanitize_spaces(string str);
 
+struct str_to_ul {
+    unsigned long operator()(const string& s) {
+        return stoul(s);
+    }
+};
+
+struct str_to_int {
+    int operator()(const string& s) {
+        return stoi(s);
+    }
+};
+
 #endif //AOC23_UTILS_H

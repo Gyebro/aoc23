@@ -2,12 +2,6 @@
 #include <math.h>
 #include <numeric>
 
-struct str_to_int {
-    int operator()(const string& s) {
-        return stoi(s);
-    }
-};
-
 class Day04Card {
 private:
     vector<int> winners;

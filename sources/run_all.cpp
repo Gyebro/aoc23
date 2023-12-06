@@ -2,6 +2,8 @@
 #include "day02.h"
 #include "day03.h"
 #include "day04.h"
+#include "day05.h"
+#include "day06.h"
 
 #include <chrono>
 #include <iomanip>
@@ -30,7 +32,9 @@ int main() {
         "Trebuchet?!",
         "Cube Conundrum",
         "Gear Ratios",
-        "Scratchcards"
+        "Scratchcards",
+        //"If You Give A Seed A Fertilizer",
+        "Wait For It"
     };
 
     vector<tuple<double, double>> times;
@@ -38,6 +42,8 @@ int main() {
     times.push_back(benchmark_day(Day02("day02.txt")));
     times.push_back(benchmark_day(Day03("day03.txt")));
     times.push_back(benchmark_day(Day04("day04.txt")));
+    //times.push_back(benchmark_day(Day05("day05.txt")));
+    times.push_back(benchmark_day(Day06("day06.txt")));
 
     // Print result to cout
     cout << endl << endl;

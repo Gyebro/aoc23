@@ -7,10 +7,11 @@ Processor: Intel(R) Core(TM) i7-12700H, single thread unless indicated
 
 Day | Part One [ms] | Part Two [ms]
 --- | ---: | ---:
-Day 1: Trebuchet?! | 0.785 | 4.701
-Day 2: Cube Conundrum | 1.202 | 1.070
-Day 3: Gear Ratios | 0.611 | 0.503
-Day 4: Scratchcards | 1.520 | 1.372
+Day 1: Trebuchet?! | 0.701 | 3.467
+Day 2: Cube Conundrum | 1.155 | 0.984
+Day 3: Gear Ratios | 0.588 | 0.435
+Day 4: Scratchcards | 1.496 | 1.322
+Day 5: Wait For It | 0.348 | 0.065
 
-Total time: 0.012 seconds (11.765 ms)
+Total time: 0.011 seconds (10.562 ms)
 

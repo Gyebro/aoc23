@@ -18,10 +18,16 @@ add_executable(run_all_days
         sources/day02.cpp
         sources/day03.cpp
         sources/day04.cpp
+        sources/day06.cpp
         sources/run_all.cpp)
+
+add_executable(current_day
+        sources/day05.cpp
+        sources/utils.cpp)
 
 add_custom_target(copy_inputs ALL)
 add_dependencies(run_all_days copy_inputs)
+add_dependencies(current_day copy_inputs)
 
 add_custom_command(TARGET copy_inputs POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
@@ -41,6 +47,9 @@ target_link_libraries(day03_test GTest::gtest_main)
 
 add_executable(day04_test sources/utils.cpp sources/day04.cpp sources/day04_test.cpp)
 target_link_libraries(day04_test GTest::gtest_main)
+
+add_executable(day06_test sources/utils.cpp sources/day06.cpp sources/day06_test.cpp)
+target_link_libraries(day06_test GTest::gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(day01_test)
