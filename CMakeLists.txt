@@ -25,6 +25,11 @@ add_executable(current_day
         sources/day05.cpp
         sources/utils.cpp)
 
+find_package(OpenMP)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(current_day PUBLIC OpenMP::OpenMP_CXX)
+endif()
+
 add_custom_target(copy_inputs ALL)
 add_dependencies(run_all_days copy_inputs)
 add_dependencies(current_day copy_inputs)
