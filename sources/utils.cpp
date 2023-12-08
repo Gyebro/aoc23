@@ -39,3 +39,19 @@ string sanitize_spaces(string str) {
     str.erase(new_end, str.end());
     return str;
 }
+
+size_t lcm(size_t a, size_t b) {
+    size_t hcf = a; // highest common factor
+    size_t temp = b;
+    while (hcf != temp) {
+        if (hcf > temp)
+            hcf -= temp;
+        else
+            temp -= hcf;
+    }
+    return (a / hcf) * b;
+}
+
+size_t lcm(size_t& a, size_t& b, size_t& c) {
+    return lcm(lcm(a,b),lcm(a,c));
+}

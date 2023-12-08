@@ -48,4 +48,8 @@ struct str_to_int {
     }
 };
 
+size_t lcm(size_t a, size_t b);
+
+size_t lcm(size_t& a, size_t& b, size_t& c);
+
 #endif //AOC23_UTILS_H

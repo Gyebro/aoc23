@@ -22,7 +22,7 @@ add_executable(run_all_days
         sources/run_all.cpp)
 
 add_executable(current_day
-        sources/day05.cpp
+        sources/day08.cpp
         sources/utils.cpp)
 
 find_package(OpenMP)
