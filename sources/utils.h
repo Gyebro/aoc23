@@ -48,6 +48,12 @@ struct str_to_int {
     }
 };
 
+struct str_to_int64 {
+    int64_t operator()(const string& s) {
+        return stoll(s);
+    }
+};
+
 size_t lcm(size_t a, size_t b);
 
 size_t lcm(size_t& a, size_t& b, size_t& c);
