@@ -10,7 +10,7 @@ private:
     string path;
 public:
     Day09(const string& inputpath);
-    int64_t solve(bool part_one = true) const;
+    int solve(bool part_one = true) const;
 };
 
 
