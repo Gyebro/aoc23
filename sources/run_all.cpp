@@ -68,7 +68,7 @@ int main() {
     times.push_back(benchmark_day(Day10("day10.txt")));
     times.push_back(benchmark_day(Day11("day11.txt")));
     times.push_back(benchmark_day(Day12("day12.txt")));
-    times.push_back(make_tuple(-0.0001,-0.0001));
+    times.push_back(benchmark_day(Day13("day13.txt")));
     times.push_back(benchmark_day(Day14("day14.txt")));
     times.push_back(benchmark_day(Day15("day15.txt")));
 

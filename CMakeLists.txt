@@ -26,12 +26,13 @@ add_executable(run_all_days
         sources/day10.cpp
         sources/day11.cpp
         sources/day12.cpp
+        sources/day13.cpp
         sources/day14.cpp
         sources/day15.cpp
         sources/run_all.cpp)
 
 add_executable(current_day
-        sources/day12.cpp
+        sources/day13.cpp
         sources/utils.cpp)
 
 find_package(OpenMP)
