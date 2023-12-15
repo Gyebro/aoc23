@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "day06.h"
+#include "../sources/day06.h"
 
 TEST(Day06, PartOneSample) {
 Day06 day("test06.txt");
