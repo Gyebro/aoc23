@@ -205,11 +205,3 @@ int Day07::solve(bool part_one) const {
     }
     return sum;
 }
-
-int main() {
-    //Day07 day("test07.txt");
-    Day07 day("day07.txt");
-    cout << "Day07 Part one: " << day.solve() << endl;
-    cout << "Day07 Part two: " << day.solve(false) << endl;
-    return 0;
-}

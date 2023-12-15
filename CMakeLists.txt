@@ -18,7 +18,16 @@ add_executable(run_all_days
         sources/day02.cpp
         sources/day03.cpp
         sources/day04.cpp
+        sources/day05.cpp
         sources/day06.cpp
+        sources/day07.cpp
+        sources/day08.cpp
+        sources/day09.cpp
+        sources/day10.cpp
+        sources/day11.cpp
+        sources/day12.cpp
+        sources/day14.cpp
+        sources/day15.cpp
         sources/run_all.cpp)
 
 add_executable(current_day
@@ -28,6 +37,7 @@ add_executable(current_day
 find_package(OpenMP)
 if(OpenMP_CXX_FOUND)
     target_link_libraries(current_day PUBLIC OpenMP::OpenMP_CXX)
+    target_link_libraries(run_all_days PUBLIC OpenMP::OpenMP_CXX)
 endif()
 
 add_custom_target(copy_inputs ALL)

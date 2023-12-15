@@ -128,11 +128,3 @@ int64_t Day11::solve(bool part_one) const {
     int64_t total = map.get_total_manhattan_distance();
     return total;
 }
-
-int main() {
-    //Day11 day("test11.txt");
-    Day11 day("day11.txt");
-    cout << "Day11 Part one: " << day.solve() << endl;
-    cout << "Day11 Part two: " << day.solve(false) << endl;
-    return 0;
-}

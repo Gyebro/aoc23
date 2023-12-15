@@ -150,13 +150,3 @@ size_t Day08::solve(bool part_one) const {
     steps = map.solve(part_one);
     return steps;
 }
-
-int main() {
-    //Day08 day("test08.txt");
-    //Day08 day("test08b.txt");
-    //Day08 day("test08c.txt");
-    Day08 day("day08.txt");
-    //cout << "Day08 Part one: " << day.solve() << endl; // 20221
-    cout << "Day08 Part two: " << day.solve(false) << endl;
-    return 0;
-}

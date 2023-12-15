@@ -283,12 +283,3 @@ int Day10::solve(bool part_one) const {
     }
 
 }
-
-int main() {
-    //Day10 day("test10.txt");
-    //Day10 day("test10b.txt");
-    Day10 day("day10.txt");
-    cout << "Day10 Part one: " << day.solve() << endl;
-    cout << "Day10 Part two: " << day.solve(false) << endl;
-    return 0;
-}

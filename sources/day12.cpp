@@ -133,11 +133,3 @@ size_t Day12::solve(bool part_one) const {
     }
     return total;
 }
-
-int main() {
-    //Day12 day("test12.txt");
-    Day12 day("day12.txt");
-    cout << "Day12 Part one: " << day.solve() << endl;
-    cout << "Day12 Part two: " << day.solve(false) << endl;
-    return 0;
-}

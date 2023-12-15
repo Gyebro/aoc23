@@ -132,10 +132,3 @@ int Day05::solve(bool part_one) const {
     }
     return min_loc;
 }
-
-int main() {
-    //Day05 day05("test05.txt");
-    Day05 day05("day05.txt");
-    cout << "Part two: " << endl << day05.solve(false) << endl;
-    return 0;
-}

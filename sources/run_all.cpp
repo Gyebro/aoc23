@@ -4,6 +4,15 @@
 #include "day04.h"
 #include "day05.h"
 #include "day06.h"
+#include "day07.h"
+#include "day08.h"
+#include "day09.h"
+#include "day10.h"
+#include "day11.h"
+#include "day12.h"
+#include "day13.h"
+#include "day14.h"
+#include "day15.h"
 
 #include <chrono>
 #include <iomanip>
@@ -33,8 +42,17 @@ int main() {
         "Cube Conundrum",
         "Gear Ratios",
         "Scratchcards",
-        //"If You Give A Seed A Fertilizer",
-        "Wait For It"
+        "If You Give A Seed A Fertilizer",
+        "Wait For It",
+        "Camel Cards",
+        "Haunted Wasteland",
+        "Mirage Maintenance",
+        "Pipe Maze",
+        "Cosmic Expansion",
+        "Hot Springs",
+        "Point of Incidence",
+        "Parabolic Reflector Dish",
+        "Lens Library"
     };
 
     vector<tuple<double, double>> times;
@@ -42,8 +60,17 @@ int main() {
     times.push_back(benchmark_day(Day02("day02.txt")));
     times.push_back(benchmark_day(Day03("day03.txt")));
     times.push_back(benchmark_day(Day04("day04.txt")));
-    //times.push_back(benchmark_day(Day05("day05.txt")));
+    times.push_back(benchmark_day(Day05("day05.txt")));
     times.push_back(benchmark_day(Day06("day06.txt")));
+    times.push_back(benchmark_day(Day07("day07.txt")));
+    times.push_back(benchmark_day(Day08("day08.txt")));
+    times.push_back(benchmark_day(Day09("day09.txt")));
+    times.push_back(benchmark_day(Day10("day10.txt")));
+    times.push_back(benchmark_day(Day11("day11.txt")));
+    times.push_back(benchmark_day(Day12("day12.txt")));
+    times.push_back(make_tuple(-0.0001,-0.0001));
+    times.push_back(benchmark_day(Day14("day14.txt")));
+    times.push_back(benchmark_day(Day15("day15.txt")));
 
     // Print result to cout
     cout << endl << endl;
@@ -69,7 +96,14 @@ int main() {
     out << setprecision(3) << fixed;
     double time_sum = 0;
     for (size_t i=0; i<day_titles.size(); i++) {
-        out << "Day " << to_string(i+1) << ": " << day_titles[i] << " | " << get<0>(times[i]) << " | " << get<1>(times[i]) << '\n';
+        out << "Day " << to_string(i+1) << ": " << day_titles[i] <<
+          " | ";
+        if (get<0>(times[i])<0.0) out << "-";
+        else out << get<0>(times[i]);
+        out << " | ";
+        if (get<1>(times[i])<0.0) out << "-";
+        else out << get<1>(times[i]);
+        out << "\n";
         time_sum += get<0>(times[i])+get<1>(times[i]);
     }
     out << endl;

@@ -91,11 +91,3 @@ int Day15::solve(bool part_one) const {
     }
     return total;
 }
-
-int main() {
-    //Day15 day("test15.txt");
-    Day15 day("day15.txt");
-    cout << "Day15 Part one: " << day.solve() << endl;
-    cout << "Day15 Part two: " << day.solve(false) << endl;
-    return 0;
-}
