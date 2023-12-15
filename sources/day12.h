@@ -11,7 +11,7 @@ private:
     string path;
 public:
     Day12(const string& inputpath);
-    int solve(bool part_one = true) const;
+    size_t solve(bool part_one = true) const;
 };
 
 
